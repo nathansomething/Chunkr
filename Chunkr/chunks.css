@@ -8,3 +8,7 @@ section.chunk p {
 section.chunk p:hover {
 	background: #BDB76B;
 }
+
+#edit-chunk-container p {
+	padding: 15px;
+}
