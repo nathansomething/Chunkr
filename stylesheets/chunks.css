@@ -1,0 +1,18 @@
+section.chunk p {
+	font-size: 16pt;
+	font-family: 'Open Sans';
+	padding: 5px;
+	border-radius: 10px;
+}
+
+section.chunk p:hover {
+	background: #BDB76B;
+}
+
+#edit-chunk-container p {
+	padding: 15px;
+}
+
+a.document-link {
+	cursor: pointer;
+}
