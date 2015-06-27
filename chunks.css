@@ -12,3 +12,7 @@ section.chunk p:hover {
 #edit-chunk-container p {
 	padding: 15px;
 }
+
+a.document-link {
+	cursor: pointer;
+}

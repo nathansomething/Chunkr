@@ -1,6 +1,11 @@
 
 $(document).ready(function(){
 	$("#edit-chunk-container").hide();
+	$(".bunch-a-chunks").hide();
+	$(".document-link").click(function() {
+		$("#bunch-a-chunks-" + $(this).data("number")).show();
+		$("#document-table").hide();
+	});
 	$(".chunk").click(function() {
 		$(".chunk").hide();
 		$(this).show();
