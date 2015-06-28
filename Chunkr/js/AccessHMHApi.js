@@ -11,6 +11,8 @@ var STAFF_PERSON = "sauron";
 var GRANT_TYPE = "password";
 var PASSWORD = "password";
 
+var NOTE_HTML = "For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.";
+var CHUNK_IDS = [];
 
 $(document).ready(function() {
     window.createFormParameters = function() {
@@ -37,9 +39,13 @@ $(document).ready(function() {
         documentFields.tags.push(tag.id + "");
 
         for (var i = 0; i < 3; i++) {
-            documentFields.note_html = i + " chunky chunks of text";
+            documentFields.note_html = NOTE_HTML;
             $('#documentFields').val(JSON.stringify(documentFields));
             createChunk();
+        }
+
+        for (var i = 0; i < 3; i++) {
+            alert(retreiveChunk(CHUNK_IDS[i]));
         }
     }
 });
@@ -94,6 +100,7 @@ function createTag(assignmentName) {
 
 function createChunk() {
     var formData = new FormData($('#ajaxform')[0]);
+    var chunkId = 0;
 
     $.ajax({
         type: "POST",
@@ -102,19 +109,46 @@ function createChunk() {
             "Vnd-HMH-Api-Key": VND_HMH_API_KEY,
             "Authorization": AUTHORIZATION
         },
+        async: false,
         contentType: false,
         mimeType: "multipart/form-data",
         processData: false,
         data: formData,
         dataType: "json",
         success: function (data) {
-            alert("title: " + data.title +
-                "\ntags: { tagName: " + data.tags[0].name + ", tagId: " + data.tags[0].id + "}" +
-                "\nnote_html: " + data.note_html);
+            chunkId = data.secure_token;
+
+            CHUNK_IDS.push(chunkId);
         },
         error: function (xhr, status, error, data) {
             alert(xhr + "\n" + status + "\n" + error + "\n" + data);
         }
     });
+
+    return chunkId;
+}
+
+function retreiveChunk(chunkId) {
+    var chunkContents = "";
+
+    $.ajax({
+        type: "GET",
+        url: "http://sandbox.api.hmhco.com/v1/documents/" + chunkId,
+        async: false,
+        headers: {
+            "Vnd-HMH-Api-Key": VND_HMH_API_KEY,
+            "Authorization": AUTHORIZATION
+        },
+        dataType: "json",
+        success: function (data) {
+            chunkContents = data.note_html;
+        },
+        error: function (xhr, status, error, data) {
+            alert(xhr + "\n" + status + "\n" + error + "\n" + data);
+        }
+    });
+
+    return chunkContents;
+
 }
 
