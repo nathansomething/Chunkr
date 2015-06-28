@@ -36,9 +36,12 @@ var chunks = function() {
 		var chunkText = $(this).html();
 		$("#main-page").load("edit-chunk.html", function() {
 			$("#current-chunk").html(chunkText);
-			$("#current-chunk").addClass("edit");
-			edit_chunk();
-			//$(".buttons").show();
+			$("#submit").click(function(){
+				var comment =  $("#edit_chunk").val();
+				$("#confirmation_input").append( "<div>" );
+				$("#confirmation_input").append( comment );
+				$("#confirmation_input").append( "</div>" );
+			});
 		});
 	});
 	$("#manage-chunks").click(function() {
