@@ -13,8 +13,10 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script
 			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Amatic+SC' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway|Roboto|Amatic+SC|Gloria+Hallelujah' rel='stylesheet' type='text/css'>
 		<link href="chunks.css" rel="stylesheet" type="text/css">
+		<script src="chunks.js"></script>
 		<script src="document.js"></script>
 		<script src="nav.js"></script>
 		<title>Chunkr</title>
@@ -24,24 +26,17 @@
 			<div class="container-fluid">
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-left">
-						<li><a id="my-documents-link" href="#">My Documents</a></li>
-						<li><a id="chunks-feed-link"href="#">Chunks Feed</a></li>
-						<li><a id="my-account-link" href="#">My Account</a></li>
-						<li><a id="about-link" href="#">About</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-center">
-						<li><h1><a id="home-link" href="#">Chunkr</a></h1></li>
+						<li id="my-documents-link" class="link">My Documents</li>
+						<li id="chunks-feed-link" class="link">Chunks Feed</li>
+						<li id="my-account-link" class="link">My Account</li>
+						<li id="about-link" class="link">About</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li>Good afternoon User</li>
+						<li id="greeting">Good afternoon User</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<div id="home" class="page"></div>
-		<div id="my-documents" class="page"></div>
-		<div id="chunks-feed" class="page"></div>
-		<div id="my-account" class="page"></div>
-		<div id="about" class="page"></div>
+		<section id="main-page"></section>
 	</body>
 </html>

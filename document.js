@@ -1,7 +1,10 @@
 
-var documnets = function() {
+
+var documents = function() {
 	$(".document-link").click(function() {
-		$("#bunch-a-chunks-" + $(this).data("number")).show(); //.text(getChunks())
-		$("#document-table").hide();
+		$("#main-page").load("chunks.html", function() {
+			$("#bunch-a-chunks").html(getChunks(0));
+			chunks();
+		});
 	});
 };

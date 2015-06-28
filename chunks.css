@@ -1,18 +1,40 @@
+body {
+	font-family: 'Ubuntu';
+}
+
 section.chunk p {
 	font-size: 16pt;
-	font-family: 'Open Sans';
 	padding: 5px;
 	border-radius: 10px;
+	border: 1px solid #FFFFFF;
 }
 
-section.chunk p:hover {
-	background: #BDB76B;
+section.chunk p:hover, section.chunk.edit p {
+	background: #90A9D4;
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid #000000;
+	box-shadow: 5px 5px 5px #888888;
 }
 
-#edit-chunk-container p {
-	padding: 15px;
-}
 
-a {
+nav li {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 18pt;
 	cursor: pointer;
+	margin: 0 10px;
+	padding: 10px 0;
+}
+
+#greeting {
+	font-family: 'Ubuntu';
+	cursor: default;
+}
+
+nav li.link:hover {
+	background: #E7E7E7;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
 }
