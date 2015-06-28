@@ -2,6 +2,8 @@ body {
 	font-family: 'Ubuntu';
 }
 
+
+
 section.chunk p {
 	font-size: 16pt;
 	padding: 5px;
@@ -19,7 +21,7 @@ section.chunk p:hover, section.chunk.edit p {
 
 
 nav li {
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Ubuntu';
 	font-size: 18pt;
 	margin: 0 10px;
 	padding: 10px 2px;
@@ -59,3 +61,13 @@ td.link {
 .inactive {
 	color: grey;
 }
+
+
+/*input text page */
+
+.inline {
+	width:45%;
+	display: inline-block;
+	vertical-align: top;
+}
+

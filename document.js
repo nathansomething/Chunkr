@@ -7,7 +7,10 @@ var documents = function() {
 			chunks();
 		});
 	});
+	$("#input-text").click(function() {
+		alert("input text");
+		$("#main-page").load("input-text.html");
+	});
 };
 
 
-	

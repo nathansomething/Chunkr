@@ -18,7 +18,10 @@ $(document).ready(function(){
 	$("#about-link").click(function() {
 		$("#main-page").load("about.html");
 	});
-	$("home-link").click(function() {
+	$("#home-link").click(function() {
 		$("#main-page").load("home.html");
+	});
+	$("#input-text").click(function() {
+		$("#main-page").load("upload_document.html");
 	});
 });
