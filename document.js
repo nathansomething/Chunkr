@@ -8,7 +8,6 @@ var documents = function() {
 		});
 	});
 	$("#input-text").click(function() {
-		alert("input text");
 		$("#main-page").load("input-text.html");
 	});
 };
