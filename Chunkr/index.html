@@ -1,97 +1,37 @@
 <!DOCTYPE>
 <html>
-	<head>
-		<!-- Latest compiled and minified CSS -->
-		<script src="jquery.min.js"></script>
-		<link rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	
-		<!-- Optional theme -->
-		<link rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-	
-		<!-- Latest compiled and minified JavaScript -->
-		<script
+<head>
+	<meta charset="UTF-8">
+	<!-- Latest compiled and minified CSS -->
+	<script src="jquery.min.js"></script>
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script
 			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link href="chunks.css" rel="stylesheet" type="text/css">
-		<script src="chunks.js"></script>
-		<title>Chunkr</title>
-	</head>
-	<body>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li class="active"><a href="#">Documents</a></li>
-						<li><a href="#">Chunks</a></li>
-						<li><a href="#">My Account</a></li>
-						<li><a href="#">About</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-center">
-						<li><h1>Chunkr</h1></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li>Good afternoon User</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<br />
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<h1>Your Documents</h1>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<button type="button" class="btn btn-default pull-right">Upload New Document</button>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<table class="table table-bordered table-hover">
-				<tr>
-					<th>Document Name</th>
-					<th>Number of Chunks</th>
-					<th>Last Modified</th>
-				</tr>
-				<tr>
-					<td><a>Document 1</a></td><td>14</td><td>6/27/15</td>
-				</tr>
-				<tr>
-					<td><a>Document 1</a></td><td>4</td><td>6/27/15</td>
-				</tr>
-				<tr>
-					<td><a>Document 1</a></td><td>72</td><td>6/27/15</td>
-				</tr>
-			</table>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<h1>Your Chunks</h1>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<button type="button" class="btn btn-default pull-right">Manage Chunks</button>
-				</div>
-			</div>
-		</div>
-		<div id="bunch-a-chunks" class="container">
-			<section id="chunk#1" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-			<section id="chunk#2" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-			<section id="chunk#3" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-			<section id="chunk#4" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-			<section id="chunk#5" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-		</div>
-		<div class="container">
-			<section id="edit-chunk-container">
-				<textarea id="edit-chunk" class="form-control" rows="5"></textarea>
-				<p class="text-center">
-					<button id="last-version" type="button" class="btn btn-primary btn-lg">Last Version</button>
-					<button id="cancel" type="button" class="btn btn-primary btn-lg">Cancel</button>
-					<button id="submit" type="button" class="btn btn-primary btn-lg">Submit</button>
-				</p>
-			</section>
-		</div>
-	</body>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="chunks.css" rel="stylesheet" type="text/css">
+	<script src="chunks.js"></script>
+	<script type="text/javascript" src="js/AccessHMHApi.js"></script>
+	<title>Chunkr</title>
+</head>
+<body>
+
+<form name="uiForm" id="uiForm" method="POST">
+	File: <input type="file" id="uiFormFile" name="file">
+	Assignment Title: <input type="text" id="uiFormTitle" name="title"/><br>
+	<button type="button" onclick="window.createFormParameters()">Submit</button>
+</form>
+
+<form style="display:none" name="ajaxform" id="ajaxform" method="POST">
+	File: <input type="file" name="file"> <br>
+	Document: <input type="text" id="documentFields" name="document"/> <br/>
+	<button type="button">Submit</button>
+</form>
+</body>
 </html>
