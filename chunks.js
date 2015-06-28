@@ -33,6 +33,8 @@ var chunks = function() {
 		$("#main-page").load("edit-chunk.html", function() {
 			$("#current-chunk").html(chunkText);
 			$("#current-chunk").addClass("edit");
+			
+			edit_chunk();
 		});
 	});
 };
