@@ -19,10 +19,11 @@
 		<link href="chunks.css" rel="stylesheet" type="text/css">
 		<script src="chunks.js"></script>
 		<script src="document.js"></script>
-		<script src="nav.js"></script>
 		<script src="edit-chunk.js"></script>
 		<script src="upload_document.js"></script>
 		<link rel="shortcut icon"  href="ChunkR.png" /> 
+		<script src="login.js"></script>
+		<script src="nav.js"></script>
 		<title>Chunkr</title>
 	</head>
 	<body>
@@ -42,6 +43,20 @@
 				</div>
 			</div>
 		</nav>
-		<section id="main-page"></section>
+		<script>$("nav").hide();</script>
+		<section id="main-page">
+			<div class="container">
+				<div class="form-signin">
+					<h2 class="form-signin-heading">Please sign in</h2>
+					<label for="username" class="sr-only">Username</label>
+					<input type="text" id="username" class="form-control" placeholder="Username">
+					<label for="inputPassword" class="sr-only">Password</label>
+					<input type="password" id="inputPassword" class="form-control" placeholder="Password" >
+					<div class="checkbox"><label><input type="checkbox" value="remember-me"> Remember me</label></div>
+					<button id="login" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+				</div>
+			</div>
+			
+		</section>
 	</body>
 </html>
