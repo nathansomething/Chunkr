@@ -13,6 +13,6 @@ section.chunk p:hover {
 	padding: 15px;
 }
 
-a.document-link {
+a {
 	cursor: pointer;
 }

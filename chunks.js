@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
-	$("#edit-chunk-container").hide();
-	$(".bunch-a-chunks").hide();
+	$(".page").hide();
 	$(".document-link").click(function() {
 		$("#bunch-a-chunks-" + $(this).data("number")).show();
 		$("#document-table").hide();

@@ -15,7 +15,8 @@
 			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link href="chunks.css" rel="stylesheet" type="text/css">
-		<script src="chunks.js"></script>
+		<script src="document.js"></script>
+		<script src="nav.js"></script>
 		<title>Chunkr</title>
 	</head>
 	<body>
@@ -23,12 +24,13 @@
 			<div class="container-fluid">
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-left">
-						<li class="active"><a href="#">Documents</a></li>
-						<li><a href="#">My Account</a></li>
-						<li><a href="#">About</a></li>
+						<li><a id="my-documents-link" href="#">My Documents</a></li>
+						<li><a id="chunks-feed-link"href="#">Chunks Feed</a></li>
+						<li><a id="my-account-link" href="#">My Account</a></li>
+						<li><a id="about-link" href="#">About</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-center">
-						<li><h1>Chunkr</h1></li>
+						<li><h1><a id="home-link" href="#">Chunkr</a></h1></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>Good afternoon User</li>
@@ -36,80 +38,10 @@
 				</div>
 			</div>
 		</nav>
-		<br />
-		<div id="document-table">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<h1>Your Documents</h1>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<button type="button" class="btn btn-default pull-right">Upload New Document</button>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<table class="table table-bordered table-hover">
-					<tr>
-						<th>Document Name</th>
-						<th>Class</th>
-						<th>Number of Chunks</th>
-						<th>Last Modified</th>
-					</tr>
-					<tr>
-						<td><a class="document-link" data-number="1">Document 1</a></td><td>English #1</td><td>14</td><td>6/27/15</td>
-					</tr>
-					<tr>
-						<td><a class="document-link" data-number="2">Document 2</a></td><td>English #1</td><td>4</td><td>6/27/15</td>
-					</tr>
-					<tr>
-						<td><a class="document-link" data-number="3">Document 3</a></td><td>English #1</td><td>72</td><td>6/27/15</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-		<div id="chunks">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<h1>Document 1 Chunks</h1>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<button type="button" class="btn btn-default pull-right">Manage Chunks</button>
-					</div>
-				</div>
-			</div>
-			<div id="bunch-a-chunks-1" class="bunch-a-chunks container">
-				<section id="chunk#1" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#2" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#3" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#4" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#5" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-			</div>
-			<div id="bunch-a-chunks-2" class="bunch-a-chunks container">
-				<section id="chunk#1" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#2" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#3" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#4" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#5" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-			</div>
-			<div id="bunch-a-chunks-3" class="bunch-a-chunks container">
-				<section id="chunk#1" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#2" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#3" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#4" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-				<section id="chunk#5" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>
-			</div>
-		</div>
-		<div class="container">
-			<section id="edit-chunk-container">
-				<textarea id="edit-chunk" class="form-control" rows="5"></textarea>
-				<p class="text-center">
-					<button id="last-version" type="button" class="btn btn-primary btn-lg">Last Version</button>
-					<button id="cancel" type="button" class="btn btn-primary btn-lg">Cancel</button>
-					<button id="submit" type="button" class="btn btn-primary btn-lg">Submit</button>
-				</p>
-			</section>
-		</div>
+		<div id="home" class="page"></div>
+		<div id="my-documents" class="page"></div>
+		<div id="chunks-feed" class="page"></div>
+		<div id="my-account" class="page"></div>
+		<div id="about" class="page"></div>
 	</body>
 </html>
