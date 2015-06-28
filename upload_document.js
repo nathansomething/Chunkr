@@ -18,9 +18,10 @@ var edit_chunk = function(){
 
 
 	
-	$("#submit").click(function(){
+	$("#submit_doc").click(function(){
 		var comment = take_in_text();
-		delimit(unchunked_text, delimiter);
+		alert("yooooo");
+		delimit(comment, delimiter);
 
 
 		// var newdiv1 = $( "<div id='object1'/>" ),

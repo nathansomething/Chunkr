@@ -2,6 +2,7 @@ var edit_chunk = function(){
 	// var unchunked_text = "test text";
 	// alert(unchunked_text);
 	// alert("hiiiieee");
+	
 	var take_in_text = function() {
 		return $("#edit_chunk").val();
 	};
@@ -12,7 +13,7 @@ var edit_chunk = function(){
 		// alert(take_in_text());
 		// document.getElementById("confirmation_input").innerHTML = take_in_text();
 		var comment = take_in_text();
-
+		var delimiter = "/n"
 		$( "#confirmation_input" ).append( "<div>" );
 		$( "#confirmation_input" ).append( comment );
 		$( "#confirmation_input" ).append( "</div>" );
