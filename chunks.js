@@ -23,18 +23,32 @@
 //});
 
 var getChunks = function(chunkID) {
-	return '<section id="chunk#1" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>' +
-		'<section id="chunk#2" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability.</p></section>';
+	var chunks = '<section id="chunk1" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style.</p>';
+	chunks += '<div class="buttons"><button class="plus btn btn-primary btn-circle" data-number="1">+</button><button class="minus btn btn-danger btn-circle" data-number="1">-</button></div></section>';	
+	chunks += '<section id="chunk2" class="chunk"><p>For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put.</p>';
+	chunks += '<div class="buttons"><button class="plus btn btn-primary btn-circle" data-number="2">+</button><button class="minus btn btn-danger btn-circle" data-number="2">-</button></div></section>';	
+		return chunks;
 }
 
 var chunks = function() {
-	$(".chunk").click(function() {
+	$(".buttons").hide();
+	$(".chunk p").click(function() {
 		var chunkText = $(this).html();
 		$("#main-page").load("edit-chunk.html", function() {
 			$("#current-chunk").html(chunkText);
 			$("#current-chunk").addClass("edit");
-			
 			edit_chunk();
+			//$(".buttons").show();
 		});
+	});
+	$("#manage-chunks").click(function() {
+		$(".buttons").toggle();
+	});
+	$(".plus").click(function() {
+		$("#chunk" + $(this).data("number") + " p").removeClass("inactive");
+	});
+	$(".minus").click(function() {
+		$("#chunk" + $(this).data("number") + " p").addClass("inactive");
+		//alert("#chunk" + $(this).data("number") + " p");
 	});
 };
