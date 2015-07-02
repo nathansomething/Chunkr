@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var edit_chunk = function(){
 	// var unchunked_text = "test text";
 	// alert(unchunked_text);
@@ -38,3 +39,8 @@ var edit_chunk = function(){
 // 		return db.getValue(k)
 // 	}
 // };
+=======
+var edit_chunk = function() {
+	
+};
+>>>>>>> 6a6f76a1fff5bfffddeff6c98ae2c9a5c9fa386c

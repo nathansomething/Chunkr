@@ -1,16 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- Latest compiled and minified CSS -->
+	<script src="jquery.min.js"></script>
+	<script src="upload_document.js"></script>
+</head>
+<body>
 <div class="container">
 	<div class = "inline">
 		<h3>
 			Input Text
 		</h3>
+<<<<<<< HEAD
 		<textarea id="upload_document" class="form-control" rows="20" style = "width:300px"></textarea>
 		<input type="SUBMIT" id="submit_doc" value="Chunk My Doc!" />
+=======
+			<form name="uiForm" id="uiForm" method="POST">
+				File: <input type="file" id="uiFormFile" name="file">
+				Essay Title: <input type="text" id="uiFormTitle" name="title"/><br>
+				Enter Essay Text: <textarea id="uiFormDocText" class="form-control" rows="20" style = "width:300px"></textarea><br>
+				<button type="button" onclick="window.createFormParameters()">Submit</button>
+			</form>
+
+			<form style="display:none" name="ajaxform" id="ajaxform" method="POST">
+				File: <input type="file" name="file"> <br>
+				Document: <input type="text" id="documentFields" name="document"/> <br/>
+			</form>
+>>>>>>> 6a6f76a1fff5bfffddeff6c98ae2c9a5c9fa386c
 
 	</div>
 	<div class = "inline">
 		<h3>
 			The Text You Have Entered
 		</h3>
-		<div id = "document_chunks"></div>
+		<div id="documentChunks"></div>
 	</div>
 </div>
+</body>
+</html>
