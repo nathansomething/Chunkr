@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var edit_chunk = function(){
 	// var unchunked_text = "test text";
 	// alert(unchunked_text);
@@ -6,7 +5,7 @@ var edit_chunk = function(){
 	var take_in_doc = function() {
 		return $("#upload_document").val();
 	};
-=======
+
 var VND_HMH_API_KEY = "b7afa888aa188c9c68b0776ce2adba80";
 var CLIENT_ID = "5529a3c4-c908-430b-b37d-4d9eef2d061f.hmhco.com";
 var AUTHORIZATION;
@@ -39,7 +38,7 @@ $(document).ready(function() {
 		}
 
 		//retreiveChunk(CHUNK_IDS[i]);
->>>>>>> 6a6f76a1fff5bfffddeff6c98ae2c9a5c9fa386c
+
 
 		$('#documentChunks').html('');
 
@@ -101,13 +100,12 @@ function createChunk() {
 	var formData = new FormData($('#ajaxform')[0]);
 	var chunkId = 0;
 
-<<<<<<< HEAD
 	
 	$("#submit_doc").click(function(){
 		var comment = take_in_doc();
 		alert("yooooo");
 		delimit(comment, delimiter);
-=======
+
 	$.ajax({
 		type: "POST",
 		url: "http://sandbox.api.hmhco.com/v1/documents",
@@ -123,7 +121,6 @@ function createChunk() {
 		dataType: "json",
 		success: function (data) {
 			chunkId = data.secure_token;
->>>>>>> 6a6f76a1fff5bfffddeff6c98ae2c9a5c9fa386c
 
 			CHUNK_IDS.push(chunkId);
 		},
